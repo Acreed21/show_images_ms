@@ -1,0 +1,17 @@
+version: '2.1'
+services:
+#  images-db:
+#    image: mysql:latest
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#    ports:
+#      - "3307:3306"
+  gallery-ms:
+    image: springboot-docker-compose-app:1
+    build: .
+    ports:
+      - '8080:8080'
+#    depends_on:
+#      - images-db
+
+  

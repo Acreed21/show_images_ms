@@ -1,0 +1,73 @@
+#Test with: http://editor.swagger.io/
+
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Microservice for gallery
+  description: Java + MySQL
+  license:
+    name: Software Architecture, 2019-I
+host: 192.168.99.105:8080
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /images:
+    get:
+      summary: Returns all public images
+      operationId: getAllPublicImages
+      responses:
+        '200':
+          description: Ok
+          schema:
+            $ref: '#/definitions/ImageList'
+
+  /images/{iduser}:
+    get:
+      summary: Returns user all images from user
+      operationId: getAllUserImages
+      parameters:
+        - name: iduser
+          in: path
+          description: The user images are return
+          required: true
+          type: string
+      responses:
+        '200':
+          description: Ok
+          schema:
+            $ref: '#/definitions/ImageList'
+
+definitions:
+
+  # Courses
+  Image:
+    type: object
+    properties:
+      id:
+        type: integer
+      image:
+        type: string
+      image_base64:
+        type: string
+      privacy:
+        type: boolean
+      iduser:
+        type: string
+
+
+  ImageList:
+    type: object
+    required:
+      - total
+      - list
+    properties:
+      total:
+        type: number
+      list:
+        type: array
+        items:
+          $ref: '#/definitions/Image'

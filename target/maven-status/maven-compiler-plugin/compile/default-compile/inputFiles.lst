@@ -1,0 +1,6 @@
+/home/danicastel/Documents/Proyecto_arquisoft/1_BackEnd/show_image/src/main/java/com/show_images/ShowImagesApplication.java
+/home/danicastel/Documents/Proyecto_arquisoft/1_BackEnd/show_image/src/main/java/com/show_images/model/Image.java
+/home/danicastel/Documents/Proyecto_arquisoft/1_BackEnd/show_image/src/main/java/com/show_images/exception/ResourceNotFoundException.java
+/home/danicastel/Documents/Proyecto_arquisoft/1_BackEnd/show_image/src/main/java/com/show_images/repository/ImageRepository.java
+/home/danicastel/Documents/Proyecto_arquisoft/1_BackEnd/show_image/src/main/java/com/show_images/controller/ImageController.java
+/home/danicastel/Documents/Proyecto_arquisoft/1_BackEnd/show_image/src/main/java/com/show_images/model/Render.java
