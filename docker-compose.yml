@@ -8,6 +8,7 @@ services:
 #      - "3307:3306"
   gallery-ms:
     image: springboot-docker-compose-app:1
+    build: .
     ports:
       - '8080:8080'
 #    depends_on:
