@@ -1,7 +1,7 @@
 # Start with a base image containing Java runtime
 
 FROM maven:3.6.0-jdk-11-slim
-RUN mvn -f /home/app/pom.xml clean package
+RUN mvn clean package
 
 
 FROM openjdk:8-jdk-alpine
