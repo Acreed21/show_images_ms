@@ -1,10 +1,9 @@
 # Start with a base image containing Java runtime
 
 FROM maven:3.6.0-jdk-11-slim
-RUN mvn clean package
-
 
 FROM openjdk:8-jdk-alpine
+CMD mvn clean package
 
 # Add a volume pointing to /tmp
 VOLUME /tmp
